@@ -5,7 +5,6 @@ import java.util.List;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import jp.co.aforce.Tools.Action;
 import jp.co.aforce.beans.ShoppingHead;
@@ -18,20 +17,20 @@ public class HeadphoneAction extends Action{
 			HttpServletRequest request, HttpServletResponse response
 			)throws Exception{
 		
-		HttpSession session=request.getSession();
+//		HttpSession session=request.getSession();
 		
-		String keyword=request.getParameter("keyword");
-		if(keyword==null) keyword="";
+//		String keyword=request.getParameter("keyword");
+//		if(keyword==null) keyword="";
 		
 		ShoppingHeadDAO daos=new ShoppingHeadDAO();
-		List<ShoppingHead> listHeadphone=daos.search(keyword);
-		session.setAttribute("listHeadphones", listHeadphone);
+//		List<ShoppingHead> listHeadphone=daos.search(keyword);
+//		session.setAttribute("listHeadphones", listHeadphone);
 		
 		
-		if(request.getParameter("Headphone").equals("Headphone")){
+//		if(request.getParameter("Headphone").equals("Headphone")){
 			List<ShoppingHead> headphones=daos.getHeadphone();
 			request.setAttribute("headphones",headphones);
-		}
+//		}
 		return "HeadphoneList.jsp";
 	}
 

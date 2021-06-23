@@ -34,11 +34,11 @@ public class CartAddAction extends Action{
 		}
 //		ShoppingHeadDAO daos=new ShoppingHeadDAO();
 //		List<ShoppingHead> listHeadphone=daos.search("");
-		List<ShoppingHead> listHeadphone=(List<ShoppingHead>)session.getAttribute("listHeadphones");
-		if(listHeadphone==null) {
+		List<ShoppingHead> headphones=(List<ShoppingHead>)session.getAttribute("headphones");
+		if(headphones==null) {
 			return "cart.jsp";
 		}
-		for(ShoppingHead sph:listHeadphone) {
+		for(ShoppingHead sph:headphones) {
 			if(sph.getId()==id) {
 				Item i=new Item();
 				i.setShoppingHead(sph);
