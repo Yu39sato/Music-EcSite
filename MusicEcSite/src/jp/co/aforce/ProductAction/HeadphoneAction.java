@@ -25,7 +25,7 @@ public class HeadphoneAction extends Action{
 		
 		ShoppingHeadDAO daos=new ShoppingHeadDAO();
 		List<ShoppingHead> listHeadphone=daos.search(keyword);
-		session.setAttribute("listHeadphone", listHeadphone);
+		session.setAttribute("listHeadphones", listHeadphone);
 		
 		
 		if(request.getParameter("Headphone").equals("Headphone")){

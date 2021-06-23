@@ -32,8 +32,12 @@ public class CartAddAction extends Action{
 				return "cart.jsp";
 			}
 		}
-		
+//		ShoppingHeadDAO daos=new ShoppingHeadDAO();
+//		List<ShoppingHead> listHeadphone=daos.search("");
 		List<ShoppingHead> listHeadphone=(List<ShoppingHead>)session.getAttribute("listHeadphones");
+		if(listHeadphone==null) {
+			return "cart.jsp";
+		}
 		for(ShoppingHead sph:listHeadphone) {
 			if(sph.getId()==id) {
 				Item i=new Item();
