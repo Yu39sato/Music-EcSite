@@ -35,7 +35,7 @@ public class ProductAction extends Action{
 	
 
 		
-		return "ListOfGoods.jsp";
+		return "admin/AdminListOfGoods.jsp";
 	}
 
 }
