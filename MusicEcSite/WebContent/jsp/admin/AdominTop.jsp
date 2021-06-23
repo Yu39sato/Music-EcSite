@@ -5,7 +5,7 @@
 
 <h1>Administrator</h1>
 
-<form action= "../Product.action"  method="post"><button type="submit" name="listOfGoods" class="button">List of goods</button></form>
+<form action= "../../Product.action"  method="post"><button type="submit" name="listOfGoods" class="button">List of goods</button></form>
 <form action=""  method="post"><button type="submit" name="" class="button">Registration</button></form>
 <form action=""  method="post"><button type="submit" name="" class= "button">Delete/Change</button></form>
 

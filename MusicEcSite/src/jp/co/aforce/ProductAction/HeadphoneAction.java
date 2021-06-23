@@ -31,7 +31,7 @@ public class HeadphoneAction extends Action{
 			List<ShoppingHead> headphones=daos.getHeadphone();
 			request.setAttribute("headphones",headphones);
 //		}
-		return "UserHeadphoneList.jsp";
+		return "user/UserHeadphoneList.jsp";
 	}
 
 }

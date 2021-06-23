@@ -29,14 +29,14 @@ public class CartAddAction extends Action{
 		for(Item i:cart) {
 			if(i.getShoppingHead().getId()==id) {
 				i.setCount(i.getCount()+1);
-				return "UserCart.jsp";
+				return "user/UserCart.jsp";
 			}
 		}
 //		ShoppingHeadDAO daos=new ShoppingHeadDAO();
 //		List<ShoppingHead> listHeadphone=daos.search("");
 		List<ShoppingHead> listHeadphone=(List<ShoppingHead>)session.getAttribute("listHeadphone");
 		if(listHeadphone==null) {
-			return "UserCart.jsp";
+			return "user/UserCart.jsp";
 		}
 		for(ShoppingHead sph : listHeadphone) {
 			if(sph.getId()==id) {
@@ -46,7 +46,7 @@ public class CartAddAction extends Action{
 				cart.add(i);
 			}
 		}
-		return "UserCart.jsp";
+		return "user/UserCart.jsp";
 	}
 
 }
