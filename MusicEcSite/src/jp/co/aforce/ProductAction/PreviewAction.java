@@ -17,15 +17,15 @@ public class PreviewAction extends Action{
 		HttpSession session=request.getSession();
 		
 	if(session.getAttribute("loginbean")==null) {
-		return "preview-error-login.jsp";
+		return "UserPreview-error-login.jsp";
 	}
 	
 	List<Item> cart=(List<Item>)session.getAttribute("cart");
 	if(cart==null || cart.size()==0) {
-		return "previer-error-cart.jsp";
+		return "UserPrevier-error-cart.jsp";
 	}
 	
-	return "purchase-in.jsp";
+	return "UserPurchase-in.jsp";
 
 }
 }
