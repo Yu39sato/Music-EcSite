@@ -5,6 +5,12 @@
 <%@include file="../header.html" %>
 
 <h1>List of Goods</h1>
+<p>検索キーワードを入力してください。</p>
+<form action="Product.action" method= "post">
+<input type="text" name="keyword">
+<input type="submit" value="Search">
+</form>
+<hr>
 
 <table style= "border-collapse:separate;border-spacing:10px">
 <c:forEach var="shoppingproduct" items="${list}">
