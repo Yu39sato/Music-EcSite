@@ -13,7 +13,7 @@
 <table style= "border-collapse:separate;border-spacing:10px">
 <c:forEach var="shoppingHeadphone"  items="${headphones}">
 <tr>
-<td><img src="../AdminImage/${shoppingHeadphone.id}.jpg" height="80"></td>
+<td><img src="AdminImage/${shoppingHeadphone.id}.jpg" height="80"></td>
 <td>${shoppingHeadphone.itemName}</td>
 <td>￥${shoppingHeadphone.price}</td>
 <td><a href="CartAdd.action?id=${shoppingHeadphone.id}">カートに追加</a></td>

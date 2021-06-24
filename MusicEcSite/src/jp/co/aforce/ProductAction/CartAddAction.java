@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import jp.co.aforce.Tools.Action;
 import jp.co.aforce.beans.Item;
 import jp.co.aforce.beans.ShoppingHead;
+import jp.co.aforce.daos.ShoppingHeadDAO;
 
 public class CartAddAction extends Action{
 	@SuppressWarnings("unchecked")
@@ -23,29 +24,30 @@ public class CartAddAction extends Action{
 		List<Item> cart=(List<Item>)session.getAttribute("cart");
 		if(cart==null) {
 			cart=new ArrayList<Item>();
-			session.setAttribute("cart", cart);
 		}
+		
+	
 		
 		for(Item i:cart) {
 			if(i.getShoppingHead().getId()==id) {
 				i.setCount(i.getCount()+1);
+				session.setAttribute("cart", cart);
 				return "user/UserCart.jsp";
 			}
 		}
-//		ShoppingHeadDAO daos=new ShoppingHeadDAO();
-//		List<ShoppingHead> listHeadphone=daos.search("");
-		List<ShoppingHead> listCartAdd=(List<ShoppingHead>)session.getAttribute("listHeadphone");
-//		if(listCartAdd==null) {
-//			return "user/UserCart.jsp";
-//		}
-		for(ShoppingHead sph : listCartAdd) {
-			//if(sph.getId()==id) {
-				Item i=new Item();
-				i.setShoppingHead(sph);
-				i.setCount(1);
-				cart.add(i);
-			//}
+
+		ShoppingHeadDAO shoppingHeadDao=new ShoppingHeadDAO();
+		ShoppingHead lineHead=shoppingHeadDao.select(id);
+		if(lineHead==null) {
+			return "user/UserCart.jsp";
 		}
+
+		Item i=new Item();
+		i.setShoppingHead(lineHead);
+		i.setCount(1);
+		cart.add(i);
+
+		session.setAttribute("cart", cart);
 		return "user/UserCart.jsp";
 	}
 

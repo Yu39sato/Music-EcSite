@@ -25,7 +25,7 @@ public class CartRemoveAction extends Action{
 				break;
 			}
 		}
-		return "UserCart.jsp";
+		return "user/UserCart.jsp";
 	}
 
 }
