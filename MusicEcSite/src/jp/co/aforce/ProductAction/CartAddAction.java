@@ -34,17 +34,17 @@ public class CartAddAction extends Action{
 		}
 //		ShoppingHeadDAO daos=new ShoppingHeadDAO();
 //		List<ShoppingHead> listHeadphone=daos.search("");
-		List<ShoppingHead> listHeadphone=(List<ShoppingHead>)session.getAttribute("listHeadphone");
-		if(listHeadphone==null) {
-			return "user/UserCart.jsp";
-		}
-		for(ShoppingHead sph : listHeadphone) {
-			if(sph.getId()==id) {
+		List<ShoppingHead> listCartAdd=(List<ShoppingHead>)session.getAttribute("listHeadphone");
+//		if(listCartAdd==null) {
+//			return "user/UserCart.jsp";
+//		}
+		for(ShoppingHead sph : listCartAdd) {
+			//if(sph.getId()==id) {
 				Item i=new Item();
 				i.setShoppingHead(sph);
 				i.setCount(1);
 				cart.add(i);
-			}
+			//}
 		}
 		return "user/UserCart.jsp";
 	}
