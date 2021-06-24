@@ -51,31 +51,7 @@ public class ShoppingHeadDAO extends DAO {
 		return line;
 		}
 	
-	//商品一覧表示DAO
-//	public ArrayList<ShoppingHead> getItems(){
-//		ArrayList<ShoppingHead> list=new ArrayList<>();
-//		try {
-//		Connection con=getConnection();
-//		
-//		PreparedStatement st=con.prepareStatement(
-//				"select * from item");
-//		ResultSet rs=st.executeQuery();
-//		
-//		while(rs.next()) {
-//			ShoppingHead sp=new ShoppingHead();
-//			sp.setId(rs.getInt("id"));
-//			sp.setItemName(rs.getString("itemName"));
-//			sp.setPrice(rs.getInt("price"));
-//			sp.setCategoryId(rs.getInt("categoryId"));
-//			list.add(sp);
-//		}
-//		st.close();
-//		con.close();
-//		}catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return list;
-//	}
+
 	//商品一覧（ユーザ）
 	public ArrayList<ShoppingHead> getHeadphone(){
 		ArrayList<ShoppingHead> listHeadphone=new ArrayList<>();
@@ -86,18 +62,14 @@ public class ShoppingHeadDAO extends DAO {
 				"select * from item where categoryId=1");
 		ResultSet rsr=str.executeQuery();
 		
-		int i=0;
+		
 		while(rsr.next()) {
-//			i++;
 			ShoppingHead spr=new ShoppingHead();
 			spr.setId(rsr.getInt("id"));
 			spr.setItemName(rsr.getString("itemName"));
 			spr.setPrice(rsr.getInt("price"));
 			spr.setCategoryId(rsr.getInt("categoryId"));
 			listHeadphone.add(spr);
-//			if(i==7) {
-//				break;
-//			}
 		}
 		str.close();
 		cons.close();
@@ -133,4 +105,29 @@ public class ShoppingHeadDAO extends DAO {
 		}
 		return shoppingHead;
 	}
+	
+	public ShoppingHead select(int id)throws Exception{
+		Connection con=getConnection();
+		PreparedStatement st=con.prepareStatement(
+		"select * from item where id=?");
+		st.setInt(1,id);
+		ResultSet rs=st.executeQuery();
+		ShoppingHead selectItem=new ShoppingHead();
+		
+		if(rs==null) {
+			return selectItem;
+		}else{
+			rs.next();
+			selectItem.setId(rs.getInt("id"));
+			selectItem.setItemName(rs.getString("itemName"));
+			selectItem.setPrice(rs.getInt("price"));
+			selectItem.setCategoryId(rs.getInt("categoryId"));
+		}
+		st.close();
+		con.close();
+		
+		return selectItem;
+
+	}
+	
 }

@@ -30,7 +30,7 @@ public class PurchaseAction extends Action{
 		}
 		
 		session.removeAttribute("cart");
-		return "UserPurchase-out.jsp";
+		return "user/UserPurchase-out.jsp";
 	}
 
 }

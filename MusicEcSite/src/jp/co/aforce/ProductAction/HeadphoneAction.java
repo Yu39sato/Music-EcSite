@@ -15,22 +15,12 @@ import jp.co.aforce.daos.ShoppingHeadDAO;
 public class HeadphoneAction extends Action{
 	public String execute(
 			HttpServletRequest request, HttpServletResponse response
-			)throws Exception{
-		
-//		HttpSession session=request.getSession();
-		
-//		String keyword=request.getParameter("keyword");
-//		if(keyword==null) keyword="";
-		
+			)throws Exception{		
 		ShoppingHeadDAO daos=new ShoppingHeadDAO();
-//		List<ShoppingHead> listHeadphone=daos.search(keyword);
-//		session.setAttribute("listHeadphones", listHeadphone);
-		
-		
-//		if(request.getParameter("Headphone").equals("Headphone")){
+
 			List<ShoppingHead> headphones=daos.getHeadphone();
 			request.setAttribute("headphones",headphones);
-//		}
+
 		return "user/UserHeadphoneList.jsp";
 	}
 

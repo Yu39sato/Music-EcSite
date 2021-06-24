@@ -17,12 +17,12 @@
 <table style="border-collapse:separate;border-spacing:10px">
 <c:forEach var="item" items="${cart}">
 <tr>
-<td>商品${item.shoppingHead.id}</td>
-<td><img src="AdminImage/${item.shoppingHead.id}.jpg" height="96"></td>
-<td>${item.shoppingHead.itemName}</td>
-<td>￥${item.shoppingHead.price}</td>
+<td>商品${item.shoppingEar.id}</td>
+<td><img src="../AdminImage/${item.shoppingEar.id}.jpg" height="96"></td>
+<td>${item.shoppingEar.itemName}</td>
+<td>￥${item.shoppingEar.price}</td>
 <td>${item.count}個</td>
-<td><a href="CartRemove.action?id=${item.shoppingHead.id}">カートから削除</a></td>
+<td><a href="CartRemove.action?id=${item.shoppingEar.id}">カートから削除</a></td>
 </tr>
 </c:forEach>
 </table>

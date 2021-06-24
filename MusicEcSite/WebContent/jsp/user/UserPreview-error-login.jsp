@@ -3,6 +3,6 @@
 <link rel="Stylesheet"  href="../../css/EC.css">
 <%@include file="../../header.html" %>
 
-<a href="login.jsp">ログイン</a>してください。
+<a href="../login.jsp">ログイン</a>してください。
 
 <%@include file="../../footer.html" %>

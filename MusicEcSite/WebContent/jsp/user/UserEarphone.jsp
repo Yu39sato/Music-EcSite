@@ -6,17 +6,17 @@
 <%@include file="../../header.html" %>
 <%@include file="UserMenu.jsp" %>
 
-<h1>Headphone</h1>
+<h1>Earphone</h1>
 
 
 
 <table style= "border-collapse:separate;border-spacing:10px">
-<c:forEach var="shoppingHeadphone"  items="${headphones}">
+<c:forEach var="shoppingEarphone"  items="${earphones}">
 <tr>
-<td><img src="AdminImage/${shoppingHeadphone.id}.jpg" height="80"></td>
-<td>${shoppingHeadphone.itemName}</td>
-<td>￥${shoppingHeadphone.price}</td>
-<td><a href="CartAdd.action?id=${shoppingHeadphone.id}">カートに追加</a></td>
+<td><img src="AdminImage/${shoppingEarphone.id}.jpg" height="80"></td>
+<td>${shoppingEarphone.itemName}</td>
+<td>￥${shoppingEarphone.price}</td>
+<td><a href="CartAdd.action?id=${shoppingEarphone.id}">カートに追加</a></td>
 
 </tr>
 </c:forEach>
