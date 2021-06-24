@@ -48,10 +48,10 @@ public class LoginAction extends HttpServlet {
 				login = dao.getLogin(id, password);
 				if (login != null) {
 					if(id == 0001) {
-						url="../jsp/AdminTop.jsp";
+						url="../jsp/admin/AdominTop.jsp";
 						
 					}else {
-						url = "../jsp/TopCategory.jsp";
+						url = "../jsp/user/UserTopCategory.jsp";
 					}
 					
 					HttpSession session=request.getSession();
