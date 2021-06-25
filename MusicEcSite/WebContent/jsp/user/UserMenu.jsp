@@ -4,4 +4,4 @@
 <a href="UserCart.jsp" class="topmenu">CART</a>
 <a href= "../../Preview.action" class="topmenu">PURCHASE</a>
 </div>
-<input type ="button" value="ログアウト" onclick="location.href='../servlet/logout'" class="topbutton">
+<input type ="button" value="LOGOUT" onclick="location.href='../servlet/logout'" class="logoutbutton">
