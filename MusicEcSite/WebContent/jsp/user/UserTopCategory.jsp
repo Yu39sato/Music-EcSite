@@ -6,8 +6,8 @@
 
 <h1>Category</h1>
 
-<form action="../../Headphone.action" method="post"><button type="submit" name="Headphone"  class="button">Headphone</button></form>
-<form action ="../../Earphone.action" method= "post"><button type="submit" name="Earphone"  class="button">Earphone</button></form>
-<form action ="../../Microphone.action" method= "post"><button type="submit" name="Microphone" class="button">Microphone</button></form>
-<form action="../../Speaker.action" method= "post"><button type="submit" name="Speaker" class="button">Speaker</button></form>
+<form action="../Headphone.action" method="post"><button type="submit" name="Headphone"  class="button">Headphone</button></form>
+<form action ="../Earphone.action" method= "post"><button type="submit" name="Earphone"  class="button">Earphone</button></form>
+<form action ="../Microphone.action" method= "post"><button type="submit" name="Microphone" class="button">Microphone</button></form>
+<form action="../Speaker.action" method= "post"><button type="submit" name="Speaker" class="button">Speaker</button></form>
 <%@include file ="../../footer.html" %>
