@@ -1,5 +1,7 @@
 <%@ page pageEncoding="UTF-8"%>
-<a href="UserTopCategory.jsp">CATEGORY TOP</a>
-<a href="UserCart.jsp">CART</a>
-<a href= "../../Preview.action">PURCHASE</a>
-<input type ="button" value="ログアウト" onclick="location.href='../../servlet/logout'">
+<div class="top">
+<a href="UserTopCategory.jsp" class="topmenu">CATEGORY TOP</a>
+<a href="UserCart.jsp" class="topmenu">CART</a>
+<a href= "../../Preview.action" class="topmenu">PURCHASE</a>
+</div>
+<input type ="button" value="ログアウト" onclick="location.href='../../servlet/logout'" class="topbutton">

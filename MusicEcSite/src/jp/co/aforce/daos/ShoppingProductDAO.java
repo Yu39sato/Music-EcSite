@@ -4,34 +4,35 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.List;
 
 import jp.co.aforce.beans.ShoppingProduct;
 
 public class ShoppingProductDAO extends DAO {
 	
-	public List<ShoppingProduct> search(String keyword) throws Exception{
-	List<ShoppingProduct> list=new ArrayList<>();
+	public ShoppingProduct search(String keyword) throws Exception{
 	
 	Connection con=getConnection();
 	
 	PreparedStatement st=con.prepareStatement(
 			"select * from item where itemName like ?");
 	st.setString(1, "%"+keyword+"%");
-	ResultSet rs=st.executeQuery();
+	ResultSet rst=st.executeQuery();
 	
-	while(rs.next()) {
-		ShoppingProduct sp=new ShoppingProduct();
-		sp.setId(rs.getInt("id"));
-		sp.setItemName(rs.getString("itemName"));
-		sp.setPrice(rs.getInt("price"));
-		sp.setCategoryId(rs.getInt("categoryId"));
-		list.add(sp);
+	ShoppingProduct searchItem=new ShoppingProduct();
+	
+
+	if(rst!=null) {
+		rst.next();
+		searchItem.setId(rst.getInt("id"));
+		searchItem.setItemName(rst.getString("itemName"));
+		searchItem.setPrice(rst.getInt("price"));
+		searchItem.setCategoryId(rst.getInt("categoryId"));
+
 	}
 	st.close();
 	con.close();
 	
-	return list;
+	return searchItem;
 }
 	public int insert(ShoppingProduct shoppingproduct) throws Exception{
 		Connection con=getConnection();
@@ -107,31 +108,7 @@ public class ShoppingProductDAO extends DAO {
 		return listHeadphone;
 	}
 	
-	//詳細ページ
-//	public ArrayList<ShoppingProduct> getDetail(){
-//		ArrayList<ShoppingProduct> listDetail=new ArrayList<>();
-//		try {
-//		Connection conDetail=getConnection();
-//		
-//		PreparedStatement stDetail=conDetail.prepareStatement(
-//				"select * from item where id=?");
-//		ResultSet rsDetail=stDetail.executeQuery();
-//		
-//		
-//			ShoppingProduct spDetail=new ShoppingProduct();
-//			spDetail.setId(rsDetail.getInt("id"));
-//			spDetail.setItemName(rsDetail.getString("itemName"));
-//			spDetail.setPrice(rsDetail.getInt("price"));
-//			spDetail.setCategoryId(rsDetail.getInt("categoryId"));
-//			listDetail.add(spDetail);
-//		
-//		stDetail.close();
-//		conDetail.close();
-//		}catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return listDetail;
-//	}
+
 	
 	public ShoppingProduct selectById(String id) {
 		Connection con=null;
