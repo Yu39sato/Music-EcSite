@@ -21,10 +21,10 @@
 		<input type ="password" name="password" placeholder="password"><br>
 	</div>
 	
-	<div class="button">
-		<input type ="submit" value="Login">
+	<%-- ><div class="buttonlogin">--%>
+		<input type ="submit" value="Login" class="buttonlogin">
 	</div>
 </form>
-</div>
+<%-- </div>--%>
 
 <%@include file ="../../footer.html" %>
