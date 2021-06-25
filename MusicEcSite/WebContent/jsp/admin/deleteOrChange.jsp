@@ -6,7 +6,7 @@
 	<div class = "delete" align = "center">
 	<h4>Delete/Change</h4>
 	
-	<form action ="../../jp.co.aforce.servlet/deleteOrChangeServlet" method = "post">
+	<form action ="../jp.co.aforce.servlet/deleteOrChangeServlet" method = "post">
 	
 		<div class = admin>
 			<div class = "inputtitle">

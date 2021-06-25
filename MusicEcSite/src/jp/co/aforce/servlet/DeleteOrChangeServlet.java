@@ -22,9 +22,9 @@ public class DeleteOrChangeServlet extends HttpServlet{
 		
 		
 		if(request.getParameter("buttonName").equals("Delete Item")) {
-			transitScreen = "../jsp/admin/delete.jsp";
+			transitScreen = "/jsp/admin/delete.jsp";
 		} else if(request.getParameter("buttonName").equals("Change Item")) {
-			transitScreen = "../jsp/admin/change.jsp";
+			transitScreen = "/jsp/admin/change.jsp";
 		}
 		
 		request.getRequestDispatcher(transitScreen).forward(request, response);
