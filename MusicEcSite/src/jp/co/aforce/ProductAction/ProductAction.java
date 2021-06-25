@@ -24,8 +24,8 @@ public class ProductAction extends Action{
 		if(keyword==null) keyword="";
 //		
 		ShoppingProductDAO dao=new ShoppingProductDAO();
-//		List<ShoppingProduct> list=dao.search(keyword);
-//		session.setAttribute("list", list);
+		List<ShoppingProduct> list=dao.search(keyword);
+		session.setAttribute("list", list);
 		
 		//一覧表示のアクション
 		if(request.getParameter("listOfGoods").equals("listOfGoods")) {

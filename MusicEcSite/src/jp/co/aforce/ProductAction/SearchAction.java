@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import jp.co.aforce.Tools.Action;
-import jp.co.aforce.beans.ShoppingProduct;
 import jp.co.aforce.daos.ShoppingProductDAO;
 
 @WebServlet()
@@ -23,9 +22,9 @@ public class SearchAction extends Action{
 //		
 		ShoppingProductDAO dao=new ShoppingProductDAO();
 		
-		ShoppingProduct list=dao.search(keyword);
+//		ShoppingProduct list=dao.search(keyword);
 //
-		session.setAttribute("list", list);
+//		session.setAttribute("list", list);
 		
 		
 		return "user/UserSearch.jsp";

@@ -4,35 +4,44 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 
 import jp.co.aforce.beans.ShoppingProduct;
 
 public class ShoppingProductDAO extends DAO {
 	
-	public ShoppingProduct search(String keyword) throws Exception{
+	public List<ShoppingProduct> search(String keyword) throws Exception{
 	
-	Connection con=getConnection();
+//	ShoppingProduct searchItem=new ShoppingProduct();
+		List<ShoppingProduct> list=new ArrayList<>();
+	    Connection con=getConnection();
 	
 	PreparedStatement st=con.prepareStatement(
 			"select * from item where itemName like ?");
 	st.setString(1, "%"+keyword+"%");
-	ResultSet rst=st.executeQuery();
+	ResultSet rs=st.executeQuery();
 	
-	ShoppingProduct searchItem=new ShoppingProduct();
-	
-
-	if(rst!=null) {
-		rst.next();
-		searchItem.setId(rst.getInt("id"));
-		searchItem.setItemName(rst.getString("itemName"));
-		searchItem.setPrice(rst.getInt("price"));
-		searchItem.setCategoryId(rst.getInt("categoryId"));
-
+	while(rs.next()) {
+		ShoppingProduct sp=new ShoppingProduct();
+		sp.setId(rs.getInt("id"));
+		sp.setItemName(rs.getString("itemName"));
+		sp.setPrice(rs.getInt("price"));
+		sp.setCategoryId(rs.getInt("categoryId"));
+		list.add(sp);
 	}
+
+//	if(rst!=null) {
+//		rst.next();
+//		searchItem.setId(rst.getInt("id"));
+//		searchItem.setItemName(rst.getString("itemName"));
+//		searchItem.setPrice(rst.getInt("price"));
+//		searchItem.setCategoryId(rst.getInt("categoryId"));
+//
+//	}
 	st.close();
 	con.close();
 	
-	return searchItem;
+	return list;
 }
 	public int insert(ShoppingProduct shoppingproduct) throws Exception{
 		Connection con=getConnection();
