@@ -14,39 +14,9 @@ public class ItemDAO extends DAO{
 		if (item.getId() == 0 || item.getItemName().isEmpty() || item.getPrice() == 0 || item.getCategoryId() == 0) {
 			return false;
 		}
-		return false;
+		return true;
 	}
 	
-	/*
-	public List<Item> selectItem() throws Exception{
-		 List<Item> list = new ArrayList<>();
-		 
-		 Connection con = getConnection();
-		 
-		 PreparedStatement st = con.prepareStatement(
-				"select * from product");
-		 ResultSet rs = st.executeQuery();
-		 
-		 ItemDAO dao = new ItemDAO();
-         // 現在の商品一覧を検索
-         rs = dao.selectItem();
-		 
-		 while (rs.next()) {
-			 int id = rs.getInt("id");
-             
-             String itemName = rs.getString("itemName");
-            
-             int price = rs.getInt("price");
-            
-             int categoryId = rs.getInt("categoryId");
-		}
-		 
-		 st.close();
-		 con.close();
-			 
-		 return list;
-	}
-	*/
 	
 	public List<ItemBean> search(String keyword)  throws Exception{
 		List<ItemBean> list = new ArrayList<>();
@@ -157,10 +127,6 @@ public class ItemDAO extends DAO{
 			con = getConnection();
 			st = con.prepareStatement("insert into item values(?, ?, ?, ?)");
 
-			
-			//Random rnd = new Random();
-			
-			//int id  = rnd.nextInt(1-999);
 
 			st.setInt(1, itemBean.getId());
 			st.setString(2, itemBean.getItemName());
