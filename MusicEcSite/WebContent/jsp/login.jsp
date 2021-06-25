@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8" %>
 	
+<link rel="Stylesheet"  href="../../css/login.css">
+<%@include file ="../../header.html" %>
 
-<%@include file ="../header.html" %>
  
 
 
@@ -26,4 +27,4 @@
 </form>
 </div>
 
-<%@include file ="../footer.html" %>
+<%@include file ="../../footer.html" %>
