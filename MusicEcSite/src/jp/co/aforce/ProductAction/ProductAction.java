@@ -20,8 +20,8 @@ public class ProductAction extends Action{
 		
 		HttpSession session=request.getSession();
 		//検索用アクション・一時的なコメントアウト
-//		String keyword=request.getParameter("keyword");
-//		if(keyword==null) keyword="";
+		String keyword=request.getParameter("keyword");
+		if(keyword==null) keyword="";
 //		
 		ShoppingProductDAO dao=new ShoppingProductDAO();
 //		List<ShoppingProduct> list=dao.search(keyword);
