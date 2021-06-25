@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link rel="Stylesheet"  href="../../css/EC.css">
+<link rel="Stylesheet"  href="css/EC.css">
 <link href="${pageContext.request.contextPath}/css/EC.css" rel="stylesheet"
 	type="" >
 <%@include file="../../header.html" %>
@@ -17,7 +17,7 @@
 <td><img src="AdminImage/${shoppingHeadphone.id}.jpg" height="80"></td>
 <td>${shoppingHeadphone.itemName}</td>
 <td>￥${shoppingHeadphone.price}</td>
-<td><a href="CartAdd.action?id=${shoppingHeadphone.id}">カートに追加</a></td>
+<td><a href="CartAdd.action?id=${shoppingHeadphone.id}" class="tda">カートに追加</a></td>
 
 </tr>
 </c:forEach>

@@ -20,13 +20,13 @@ public class PurchaseAction extends Action{
 		String name=request.getParameter("name");
 		String address=request.getParameter("address");
 		if(name.isEmpty() || address.isEmpty()) {
-			return "UserPurchase-error-empty.jsp";
+			return "user/UserPurchase-error-empty.jsp";
 		}
 		
 		PurchaseDAO dao=new PurchaseDAO();
 		List<Item> cart=(List<Item>)session.getAttribute("cart");
 		if(cart==null || !dao.insert(cart, name, address)) {
-			return "UserPurchase-error-insert.jsp";
+			return "user/UserPurchase-error-insert.jsp";
 		}
 		
 		session.removeAttribute("cart");

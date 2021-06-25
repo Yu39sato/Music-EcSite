@@ -5,7 +5,9 @@
 <%@include file="UserMenu.jsp"  %>
 
 <h1>Category</h1>
-
+<div class="message">
+<p>Welcome to SoundHome!</p>
+</div>
 <div class="form-conf">
 <form action="../Headphone.action" method="post"><button type="submit" name="Headphone"  class="button">Headphone</button></form>
 <form action ="../Earphone.action" method= "post"><button type="submit" name="Earphone"  class="button">Earphone</button></form>
