@@ -2,11 +2,13 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="Stylesheet"  href="../../css/EC.css">
+<link href="${pageContext.request.contextPath}/css/EC.css" rel="stylesheet"
+	type="" >
 <%@include file="../../header.html" %>
 
 <h1>List of Goods</h1>
 <p>検索キーワードを入力してください。</p>
-<form action="../Product.action" method= "post">
+<form action="../../Product.action" method= "post">
 <input type="text" name="keyword">
 <input type="submit" value="Search">
 </form>

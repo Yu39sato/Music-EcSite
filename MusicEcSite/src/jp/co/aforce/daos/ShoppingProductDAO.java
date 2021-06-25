@@ -11,9 +11,10 @@ import jp.co.aforce.beans.ShoppingProduct;
 public class ShoppingProductDAO extends DAO {
 	
 	public List<ShoppingProduct> search(String keyword) throws Exception{
-	List<ShoppingProduct> list=new ArrayList<>();
 	
-	Connection con=getConnection();
+//	ShoppingProduct searchItem=new ShoppingProduct();
+		List<ShoppingProduct> list=new ArrayList<>();
+	    Connection con=getConnection();
 	
 	PreparedStatement st=con.prepareStatement(
 			"select * from item where itemName like ?");
@@ -28,6 +29,15 @@ public class ShoppingProductDAO extends DAO {
 		sp.setCategoryId(rs.getInt("categoryId"));
 		list.add(sp);
 	}
+
+//	if(rst!=null) {
+//		rst.next();
+//		searchItem.setId(rst.getInt("id"));
+//		searchItem.setItemName(rst.getString("itemName"));
+//		searchItem.setPrice(rst.getInt("price"));
+//		searchItem.setCategoryId(rst.getInt("categoryId"));
+//
+//	}
 	st.close();
 	con.close();
 	
@@ -107,31 +117,7 @@ public class ShoppingProductDAO extends DAO {
 		return listHeadphone;
 	}
 	
-	//詳細ページ
-//	public ArrayList<ShoppingProduct> getDetail(){
-//		ArrayList<ShoppingProduct> listDetail=new ArrayList<>();
-//		try {
-//		Connection conDetail=getConnection();
-//		
-//		PreparedStatement stDetail=conDetail.prepareStatement(
-//				"select * from item where id=?");
-//		ResultSet rsDetail=stDetail.executeQuery();
-//		
-//		
-//			ShoppingProduct spDetail=new ShoppingProduct();
-//			spDetail.setId(rsDetail.getInt("id"));
-//			spDetail.setItemName(rsDetail.getString("itemName"));
-//			spDetail.setPrice(rsDetail.getInt("price"));
-//			spDetail.setCategoryId(rsDetail.getInt("categoryId"));
-//			listDetail.add(spDetail);
-//		
-//		stDetail.close();
-//		conDetail.close();
-//		}catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return listDetail;
-//	}
+
 	
 	public ShoppingProduct selectById(String id) {
 		Connection con=null;
