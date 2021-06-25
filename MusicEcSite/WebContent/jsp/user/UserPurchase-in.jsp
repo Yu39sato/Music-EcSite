@@ -21,11 +21,11 @@
 </table>
 
 <hr>
-
+<div class="insertform">
 <form action="Purchase.action" method="post" >
 <p>名前<input type="text" name="name"></p>
 <p>住所<input type= "text" name="address"></p>
-<p><input type= "submit" value="購入を確定"></p>
+<p><input type= "submit" value="購入を確定" class="purchase"></p>
 </form>
-
+</div>
 <%@include file="../../footer.html" %>

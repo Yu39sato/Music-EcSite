@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="Stylesheet"  href="css/EC.css">
-
+<link href="${pageContext.request.contextPath}/css/EC.css" rel="stylesheet"
+	type="" >
 <%@include file="../../header.html" %>
 <%@include file="UserMenu.jsp" %>
 
