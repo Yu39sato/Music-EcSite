@@ -1,26 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Sound Home</title>
-</head>
-<body>
 
-	<p>Delete/Change</p>
+<link rel="Stylesheet"  href="../../css/admin.css">
+<%@include file= "../../adminHeader.html" %>
+	<div class = "delete" align = "center">
+	<h4>Delete/Change</h4>
 	
 	<form action ="../../jp.co.aforce.servlet/deleteOrChangeServlet" method = "post">
 	
 		<div class = admin>
-			<div class = "">Delete Or Change
-				<input type = "submit" name = "buttonName" value ="DeleteItem" id = "deleteItem"/>
-				<input type = "submit" name = "buttonName" value ="ChangeItem" id = "changeItem"/>
+			<div class = "inputtitle">
+				<input type = "submit" name = "buttonName" value ="Delete Item" class = "button"/>
+				<input type = "submit" name = "buttonName" value ="Change Item" class = "button"/>
 			</div>
 		</div>
 	
 	</form>
+	</div>
 
-
-</body>
-</html>
+<%@include file ="../../adminFooter.html" %>

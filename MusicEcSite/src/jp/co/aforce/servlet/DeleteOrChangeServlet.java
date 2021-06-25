@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jp.co.aforce.servlet/deleteOrChangeServlet")
+@WebServlet(urlPatterns={"/jp.co.aforce.servlet/deleteOrChangeServlet"})
 public class DeleteOrChangeServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		request.getRequestDispatcher("../jsp/admin/deleteOrChange.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsp/admin/deleteOrChange.jsp").forward(request, response);
 	}
 	
 	
@@ -21,9 +21,9 @@ public class DeleteOrChangeServlet extends HttpServlet{
 		String transitScreen = "../jsp/admin/deleteOrChange.jsp";
 		
 		
-		if(request.getParameter("buttonName").equals("DeleteItem")) {
+		if(request.getParameter("buttonName").equals("Delete Item")) {
 			transitScreen = "../jsp/admin/delete.jsp";
-		} else if(request.getParameter("buttonName").equals("ChangeItem")) {
+		} else if(request.getParameter("buttonName").equals("Change Item")) {
 			transitScreen = "../jsp/admin/change.jsp";
 		}
 		
