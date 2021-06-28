@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link rel="Stylesheet"  href="../../css/admin.css">
+<link rel="Stylesheet"  href="../css/admin.css">
 <%@include file= "../../adminHeader.html" %>
 
 	<% 
