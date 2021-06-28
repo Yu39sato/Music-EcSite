@@ -6,11 +6,13 @@
 <%@include file="UserMenu.jsp"  %>
 
 <h1>Search</h1>
+<div class="searchpage">
 <form action="../../Search.action" method="post">
-<input type ="text" name="keyword">
+<input type ="text" name="keyword" class="">
 <input type="submit" value="検索">
 
 </form>
+</div>
 <hr>
 <table style="border-collapse:separate;border-spacing:10px;">
 <c:forEach var="ShoppingProduct"  items="${list}">

@@ -16,5 +16,5 @@
 <%@include file ="../../footer.html" %>
 </div>
 <div class="a-search">
-<a href="UserSearch.jsp" class="search">検索はこちら</a>
+<a href="../jsp/user/UserSearch.jsp" class="search">検索はこちら</a>
 </div>
