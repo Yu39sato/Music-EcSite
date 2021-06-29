@@ -4,7 +4,7 @@
 <link rel="Stylesheet"  href="../../css/EC.css">
 <link href="${pageContext.request.contextPath}/css/EC.css" rel="stylesheet"
 	type="" >
-<%@include file="../../header.html" %>
+<%@include file="../../header2.html" %>
 
 <h1>List of Goods</h1>
 <p>検索キーワードを入力してください。</p>

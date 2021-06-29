@@ -4,7 +4,7 @@
 <link rel="Stylesheet"  href="css/EC.css">
 <link href="${pageContext.request.contextPath}/css/EC.css" rel="stylesheet"
 	type="" >
-<%@include file="../../header.html" %>
+<%@include file="../../header2.html" %>
 <%@include file="UserMenu.jsp" %>
 
 <h1>Speaker</h1>
