@@ -14,7 +14,7 @@
 	</c:otherwise>	
 </c:choose>
 
-<table style="border-collapse:separate;border-spacing:10px">
+<table style="border-collapse:separate;border-spacing:10px" align="center">
 <c:forEach var="item" items="${cart}">
 <tr>
 <td>商品${item.shoppingHead.id}</td>
