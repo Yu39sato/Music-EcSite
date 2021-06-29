@@ -11,7 +11,7 @@
 
 
 
-<table style= "border-collapse:separate;border-spacing:10px" align="center">
+<table style= "border-collapse:separate;border-spacing:10px">
 <c:forEach var="shoppingMicrophone"  items="${microphones}">
 <tr>
 <td><img src="AdminImage/${shoppingMicrophone.id}.jpg" height="80"></td>

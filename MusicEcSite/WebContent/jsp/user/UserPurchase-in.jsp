@@ -7,7 +7,7 @@
 <p>${cart.size()}個の商品がカートに入っています。</p>
 <hr>
 
-<table style="border-collapse:separate;border-spacing:10px" align="center">
+<table style="border-collapse:separate;border-spacing:10px">
 <c:forEach var="item" items="${cart}">
 <tr>
 <td>商品${item.shoppingHead.id}</td>
