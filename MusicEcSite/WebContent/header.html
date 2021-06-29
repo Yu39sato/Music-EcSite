@@ -1,0 +1,60 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+<title>Sound Home</title>
+<link rel="Stylesheet"  href="../css/EC.css">
+<link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+
+
+
+<div class="openbtn"><span></span><span></span><span></span></div>
+<nav id="g-nav">
+<div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+
+<c:if test="${!(empty sessionScope.login)}">
+
+	<ul>
+		<li class="menu">User Menu</li>
+		<li><a href="jsp/user/UserTopCategory.jsp">Top</a></li> 
+		<li><a href="jsp/user/UserCart.jsp">Cart</a></li> 
+		<li><a href="">Logout</a></li>
+	</ul>
+</c:if>
+</div>
+</nav>
+
+<div class = "header-inner">
+	<h1 class = "headerLogo">
+		<a class = "logo">
+			<img src = "../AdminImage/logo.png" alt = "SoundHome">
+		</a>
+	</h1>
+</div>
+
+<header>
+
+
+<div class="container">
+
+
+</div>
+
+</header>
+

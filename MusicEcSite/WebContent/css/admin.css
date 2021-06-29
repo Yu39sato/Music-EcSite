@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+
+body{
+	background-color:#f9ead2;
+	padding-top:90px;
+}
+
+.formtitle{
+	color:#404b73;
+	text-align:center;
+}
+
+h4{
+	color:#404b73;
+	text-align:center;
+	font-size:15px;
+}
+
+img{
+	display:inline-block;
+	padding:20px;
+	height:150px;
+}
+
+h1{
+	color:#404b73;
+	text-align:center;
+}
+
+h2{
+	color:#404b73;
+	text-align:center;
+}
+
+.button{
+	display:imline-block;
+	border-radius:5px;
+	font-size:15px;
+	font-weight:bold;
+	text-align:center;
+	background-color:#848ab7;
+	color:#404b73;
+	box-shadow:0 0 8px  #404b73;
+}
+
+.button:hover{
+	box-shadow:0 0 8px  white;
+	opacity:0.8;
+}
+
+
+.idtd{
+	border: 5px;
+	margin:5px;
+}
+
+.itemNametd{
+	border: 5px;
+	margin:5px;
+}
+.pricetd{
+	border: 5px;
+	margin:5px;
+}
+.categoryIdtd{
+	border: 5px;
+	margin:5px;
+}
+
+.admin{
+	text-align:center;
+}
+
+.alert{
+	color:#404b73;
+	font-size:15px;
+}
+
+header{
+	padding: 6px 0;
+}
+
+.header-inner{
+	max-width:220px;
+	margin:0 auto;
+	width:100%;
+}
