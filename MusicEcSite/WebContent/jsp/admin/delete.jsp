@@ -10,7 +10,7 @@
 <table style= "border-collapse:separate;border-spacing:10px">
 <c:forEach var="shoppingproduct" items="${list}">
 <tr>
-<td><img src="AdminImage/${shoppingproduct.id}.jpg" height="80"></td>
+<td><img src="../AdminImage/${shoppingproduct.id}.jpg" height="80"></td>
 <td>${shoppingproduct.itemName}</td>
 <td>￥${shoppingproduct.price}</td>
 <td><a href = "${shoppingproduct.id }"><button type="submit" name="delete" class="button" >delete</button></a></td>
