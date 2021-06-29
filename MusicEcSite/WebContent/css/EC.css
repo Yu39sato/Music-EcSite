@@ -19,8 +19,10 @@
 }
 
 table{
-	text-align:center;
+	
 	color:#404b73;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .tda{
